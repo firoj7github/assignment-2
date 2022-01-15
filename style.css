@@ -1,0 +1,80 @@
+/* google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Poppins:ital@0;1&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:#F3F1FF;
+}
+
+/* header part */
+.container{
+    height: 600px;
+}
+.influencers{
+    display: flex;
+    
+}
+.container h2{
+    padding-left: 80px;
+    padding-top: 30px;
+    font-size: 22px;
+}
+.influencer-part{
+    width: 50%;
+    padding-left: 80px;
+    padding-top: 130px;
+    
+}
+.influencer-part h1{
+    font-size: 45px;
+}
+.influencer-part button{
+    font-size: 18px;
+    text-decoration: none;
+    background-color: crimson;
+    padding: 7px 10px;
+    border-radius: 6px;
+    
+    color: ghostwhite;
+}
+.influencer-image{
+    width: 50%;
+}
+.influencer-image img{
+  padding-left: 70px;
+}
+/* main style */
+main{
+    display: flex;
+    justify-content: center;
+    
+}
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 1020px;
+    margin-left: 90px;
+    margin-top: 100px;
+    border-radius: 3px;
+}
+.tumble img{
+    width: 280px;
+    height: 190px;
+}
+.tumble-rank{
+    display: flex;
+    align-items: center;
+    
+   
+}
+.tumble-pera{
+    margin-left: 8px;
+}
+.blog{
+    height: 350px;
+}
+.tumble-info h6 , h2 , p{
+    margin: 2px;
+}
