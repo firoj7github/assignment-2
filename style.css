@@ -1,17 +1,23 @@
-/* google font */
+/*-------- google font 
+--------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Poppins:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Montserrat&family=Poppins:ital@0;1&display=swap');
 
 
 body{
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     background-color:#F3F1FF;
 }
 
-/* header part */
+/*---------- header part
+--------------------- */
+
 .container{
     height: 600px;
+    font-family: 'Poppins', sans-serif;
 }
+
 .influencers{
     display: flex;
     
@@ -24,7 +30,7 @@ body{
 .influencer-part{
     width: 50%;
     padding-left: 80px;
-    padding-top: 130px;
+    padding-top: 100px;
     
 }
 .influencer-part h1{
@@ -33,24 +39,33 @@ body{
 .influencer-part button{
     font-size: 18px;
     text-decoration: none;
-    background-color: crimson;
+    background-color: darkorange;
     padding: 7px 10px;
     border-radius: 6px;
-    
     color: ghostwhite;
+    margin-top: 25px;
 }
 .influencer-image{
     width: 50%;
 }
 .influencer-image img{
   padding-left: 70px;
+  transition: width 10s , height 8s , transform 15s;
+  
+  
 }
-/* main style */
+.container:hover .influencer-image img{
+    transform: rotate(180deg);
+}
+/*---------- main style 
+---------------------*/
+
 main{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
     
 }
 .main-container h3{
@@ -59,7 +74,7 @@ main{
 .blogs{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-   grid-row-gap: 37px;
+    grid-row-gap: 37px;
     width: 1020px;
     margin-left: 90px;
     margin-top: 40px;
@@ -84,15 +99,43 @@ main{
 .tumble-pera{
     margin-left: 8px;
 }
-.blog{
+.blog-1{
     height: 350px;
     width: 300px;
-   background-color:#ffffff;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 7px;
+    background-color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
    
+}
+.blog-2{
+    height: 350px;
+    margin-top: 25px;
+    width: 300px;
+    background-color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+   
+}
+.blog-3{
+    height: 350px;
+    margin-top: 25px;
+    width: 300px;
+    background-color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+   
+}
+.btn-position{
+   left: 975px;
+   position: relative;
+    margin-top: 25px;
+   color: maroon;
 }
 .tumble-info h6 , h2 , p{
     margin: 2px;
@@ -108,12 +151,12 @@ main{
     align-items: center;
     height: 310px;
     border-radius: 11px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
 }
 .rating-info{
-    padding-left: 21px;
-  color: black;
+   padding-left: 21px;
+   color: black;
 }
 
 .rating{
@@ -121,11 +164,13 @@ main{
    grid-template-columns: repeat(4, 1fr);
    grid-column-gap: 70px;
 }
-/* footer style */
+/*-------------- footer style 
+---------------------------*/
+
 .footer{
     margin-top: 170px;
     height: 200px;
-    background-color: rgba(2, 5, 19, 0.801);
+    background-color: rgba(18, 1, 63, 0.801);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -135,20 +180,23 @@ main{
 .footer-info h2{
     color: seashell;
     margin-top: 35px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 15px;
 }
-.footer-info h5{
+.footer-info h4 , h4{
     margin-top: 5px;
     color: seashell;
-   
 }
 .info-title{
     margin-left: 60px;
-    margin-top: 5px;
     color: seashell;
+    margin-top: 5px;
+    
 }
 .footer-icon{
     margin-left: 20px;
-   color: orange;
+    color: cornsilk;
+   
    
 }
 .fa-skype{
@@ -158,4 +206,29 @@ main{
 .fa-instagram-square{
     padding: 10px 25px;
     
+}
+/* media quiery mobile device */
+@media only screen and (max-width: 688px) {
+    .container, .main-container, .footer{
+        width: 100%;
+    }
+    .influencers, .blogs, .ratings, .footer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .influencers, .blogs, .ratings, .footer{
+        flex-direction: column;
+    }
+
+}
+/* media quiery pad device */
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    .container, .main-container, .footer{
+        width: 100%;
+    }
+    .influencers, .blogs, .ratings, .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .influencers, .blogs, .ratings, .footer{
+        flex-direction: column;
+    }
 }
